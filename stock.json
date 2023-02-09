@@ -1,0 +1,10 @@
+[
+    {"id": 1, "nombre": "Zapatillas 1", "tipo": "zapatillas", "precio": 15000, "talle": 39, "desc": "Unas zapatillas para toda ocasión", "img": "./img/zapatilla.jpg"},
+    {"id": 2, "nombre": "Zapatillas 2", "tipo": "zapatillas", "precio": 16000, "talle": 40, "desc": "Unas zapatillas para toda ocasión", "img": "./img/zapatilla.jpg"},
+    {"id": 3, "nombre": "Zapatillas 3", "tipo": "zapatillas", "precio": 20000, "talle": 41, "desc": "Unas zapatillas para toda ocasión", "img": "./img/zapatilla.jpg"},
+    {"id": 4, "nombre": "Zapatillas 4", "tipo": "zapatillas", "precio": 15000, "talle": 42, "desc": "Unas zapatillas para toda ocasión", "img": "./img/zapatilla.jpg"},
+    {"id": 5, "nombre": "Zapatillas 5", "tipo": "zapatillas", "precio": 18000, "talle": 43, "desc": "Unas zapatillas para toda ocasión", "img": "./img/zapatilla.jpg"},
+    {"id": 6, "nombre": "Zapatillas 6", "tipo": "zapatillas", "precio": 13000, "talle": 43, "desc": "Unas zapatillas para toda ocasión", "img": "./img/zapatilla.jpg"},
+    {"id": 7, "nombre": "Zapatillas 7", "tipo": "zapatillas", "precio": 15500, "talle": 43, "desc": "Unas zapatillas para toda ocasión", "img": "./img/zapatilla.jpg"},
+    {"id": 8, "nombre": "Zapatillas 8", "tipo": "zapatillas", "precio": 22000, "talle": 44, "desc": "Unas zapatillas para toda ocasión", "img": "./img/zapatilla.jpg"}
+]

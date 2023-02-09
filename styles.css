@@ -51,10 +51,24 @@ h1 {
     flex-wrap: wrap;
 }
 
+#contenedor-fetch {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 p {
     line-height: 1.8;
 }
 .producto {
+    max-width: 20%;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.productoFetch{
     max-width: 20%;
     padding: 10px;
     margin: 10px;

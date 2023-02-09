@@ -1,6 +1,8 @@
 
 const contenedorProductos = document.getElementById('contenedor-productos')
 
+const contenedorFetch = document.getElementById('contenedor-fetch')
+
 const contenedorCarrito = document.getElementById('carrito-contenedor')
 
 const botonVaciar = document.getElementById('vaciar-carrito')
@@ -42,7 +44,7 @@ botonVaciar.addEventListener('click', () => {
     })
 
 
-
+//AGREGANDO PRODUCTOS DEL STOCK.JS
 stockProductos.forEach((producto) => {
     const div = document.createElement('div')
     div.classList.add('producto')
@@ -79,9 +81,30 @@ stockProductos.forEach((producto) => {
         agregarAlCarrito(producto.id)
     })
 })
+//AGREGANDO PRODUCTOS DEL STOCK.JSON
+    fetch('/stock.json')
+        .then(resp => resp.json())
+        .then(stock => {
+            stock.forEach(producto => {
+                const div = document.createElement('div')
+                div.classList.add('productoFetch')
+                div.innerHTML = `
+                    <img src= ${producto.img} alt="">
+                    <h3>${producto.nombre}</h3>
+                    <p>${producto.desc}</p>
+                    <p>Talle:${producto.talle}</p>
+                    <p class="precioProducto">Precio:$ ${producto.precio}</p>
+                    <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+            `
+
+            contenedorFetch.appendChild(div)
+        })
+    })
 
 
-const agregarAlCarrito = (prodId) => {
+//FUNCION PARA AGREGAR LOS PRODUCTOS AL CARRITO Y 
+
+    const agregarAlCarrito = (prodId) => {
     const existe = carrito.some (prod => prod.id === prodId) 
 
     if (existe){ 
