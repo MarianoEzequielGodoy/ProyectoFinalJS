@@ -39,7 +39,8 @@ botonVaciar.addEventListener('click', () => {
         title: 'Su carrito está vacio'
       })
     actualizarCarrito()
-})
+    })
+
 
 
 stockProductos.forEach((producto) => {
@@ -98,11 +99,8 @@ const agregarAlCarrito = (prodId) => {
 }
 
 const eliminarDelCarrito = (prodId) => {
-    const item = carrito.find((prod) => prod.id === prodId)
-
-    const indice = carrito.indexOf(item)
-
-    carrito.splice(indice, 1) 
+    const productoIndex = carrito.findIndex((prod) => prod.id == prodId)
+    carrito.splice(productoIndex, 1) 
     actualizarCarrito()
 
     console.log(carrito)
@@ -122,11 +120,15 @@ const actualizarCarrito = () => {
 
         contenedorCarrito.appendChild(div)
         
-        localStorage.setItem('carrito', JSON.stringify(carrito))
+        
 
     })
-
     contadorCarrito.innerText = carrito.length
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
+    guardarCarrito()
+}
+
+const  guardarCarrito = () => {
+    localStorage.setItem('carrito', JSON.stringify(carrito))
 }
